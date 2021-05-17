@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.demo.proto";
+
+package com.example.demo.proto;
+
+service Transaction {
+  rpc Create (TransactionRequest) returns (TransactionReply) {}
+  rpc Refer (TransactionReferRequest) returns (TransactionReferReply) {}
+  rpc CreateWithBatch (stream TransactionRequest) returns (TransactionReply) {}
+  rpc ReferWithBatch (TransactionReferRequest) returns (stream TransactionReferReply) {}
+}
+
+message TransactionRequest {
+  string name = 1;
+  string vendor = 2;
+  int64 amount = 3;
+}
+
+message TransactionReply {
+  string id = 1;
+}
+
+message TransactionReferRequest {
+  string id = 1;
+}
+message TransactionReferReply {
+  enum Status {
+    ACCEPT = 0;
+    COMPLETED = 1;
+    REJECTED = 2;
+  }
+  string id = 1;
+  string name = 2;
+  string vendor = 3;
+  int64 amount = 4;
+  Status status = 5;
+}

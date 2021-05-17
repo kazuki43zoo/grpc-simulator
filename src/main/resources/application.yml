@@ -1,0 +1,10 @@
+grpc:
+  simulator-server:
+    port: 50051
+    scan-packages:
+      - com.example.demo
+    save-input: true
+
+logging:
+  level:
+    com.example: debug

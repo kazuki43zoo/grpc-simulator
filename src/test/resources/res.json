@@ -1,0 +1,6 @@
+{
+  "id": 'asdfasdf',
+  "name": "#payload[name]",
+  "vendor": "#payload[vendor]",
+  "amount": "#payload[amount]"
+}

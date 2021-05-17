@@ -1,0 +1,27 @@
+[
+  {
+    "method": "com.example.demo.proto.Transaction/Create",
+    "filter": "#payload.name == 'kazuki'",
+    "use": "payload",
+    "payload": {
+      "id": "1"
+    },
+    "error": {
+      "status": "NOT_FOUND",
+      "description": "sadfasdfas"
+    }
+  },
+  {
+    "method": "com.example.demo.proto.Transaction/Create",
+    "filter": "#payload.name == 'hanako'",
+    "payload": {
+      "id": "2"
+    }
+  },
+  {
+    "method": "com.example.demo.proto.Transaction/Create",
+    "payload": {
+      "id": "3"
+    }
+  }
+]

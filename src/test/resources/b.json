@@ -1,0 +1,16 @@
+[
+  {
+    "method": "com.example.demo.proto.Transaction/Create",
+    "filter": "#payload[name] == 'kazuki'",
+    "payload": {
+      "id": "${UUID}"
+    }
+  },
+  {
+    "method": "com.example.demo.proto.Transaction/Create",
+    "filter": "#payload[name] == 'kazuki'",
+    "payload": {
+      "id": "${UUID}"
+    }
+  }
+]
